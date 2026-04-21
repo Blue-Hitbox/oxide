@@ -42,7 +42,7 @@ The Oxide window is composed of six regions stacked and nested:
 ┌─────────────────────────────────────────────────────────┐
 │ Title bar (30px)                                        │
 ├──────┬──────────────┬──────────────────────┬────────────┤
-│      │              │  Tab bar (34px)       │            │
+│      │              │  Tab bar (34px)      │            │
 │      │              ├──────────────────────│            │
 │      │              │  Breadcrumb (24px)   │            │
 │  A   │   Sidebar    ├──────────────────────│  AI Agents │
