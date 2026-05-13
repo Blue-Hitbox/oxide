@@ -1,7 +1,4 @@
-use axum::{
-    routing::get,
-    Json, Router,
-};
+use axum::{routing::get, Json, Router};
 use serde::Serialize;
 use std::net::SocketAddr;
 use tower_http::cors::CorsLayer;

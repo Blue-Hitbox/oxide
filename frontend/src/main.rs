@@ -1,6 +1,6 @@
-use yew::prelude::*;
 use gloo_net::http::Request;
 use serde::Deserialize;
+use yew::prelude::*;
 
 #[derive(Clone, PartialEq, Deserialize)]
 struct FileInfo {
@@ -29,14 +29,17 @@ fn app() -> Html {
         });
     }
 
-    let file_list = files.iter().map(|file| {
-        html! {
-            <li key={file.name.clone()}>
-                { if file.is_dir { "📁 " } else { "📄 " } }
-                { &file.name }
-            </li>
-        }
-    }).collect::<Html>();
+    let file_list = files
+        .iter()
+        .map(|file| {
+            html! {
+                <li key={file.name.clone()}>
+                    { if file.is_dir { "📁 " } else { "📄 " } }
+                    { &file.name }
+                </li>
+            }
+        })
+        .collect::<Html>();
 
     html! {
         <div style="display: flex; height: 100vh; font-family: sans-serif;">
